@@ -6,6 +6,8 @@ const myFunction = () => {
 
 myFunction();
 
+myFunction();
+
 // This can work across files, too:
 
 import { hiThere } from "./dummy-import";

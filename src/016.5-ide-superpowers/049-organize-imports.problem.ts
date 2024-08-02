@@ -1,11 +1,5 @@
 import {
-  MAX_PAGE,
-  DEFAULT_COLOR,
-  DEFAULT_FILTER,
-  DEFAULT_PAGE,
-  DEFAULT_SORT,
-  DEFAULT_USERNAME,
-  FILTER_OPTIONS,
+  MAX_PAGE
 } from "./dummy-import-2";
 
 const handlePage = (page: number) => {
