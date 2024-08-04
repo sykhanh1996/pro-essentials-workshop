@@ -3,7 +3,7 @@
 
 import { Equal, Expect } from "@total-typescript/helpers";
 
-const returnsStringOrNumber = (): string | number => {
+const returnsStringOrNumber = () => {
   return 1;
 };
 
@@ -26,7 +26,7 @@ function getPermissions(role: UserRole): string[] {
       return ["create", "read", "update", "delete"];
     case "editor":
       return ["create", "read", "update"];
-    // case "viewer":
-    //   return ["read"];
+    case "viewer":
+      return ["read"];
   }
 }

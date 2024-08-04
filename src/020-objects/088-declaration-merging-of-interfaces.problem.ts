@@ -1,4 +1,4 @@
-interface Logger {
+interface Logger2 {
   log(message: string, level: number): void;
 }
 
@@ -15,5 +15,5 @@ const myLogger: Logger = {
 myLogger.log(
   "My message",
   // @ts-expect-error Level is NOT needed
-  123,
+  123
 );

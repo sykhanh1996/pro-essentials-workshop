@@ -1,4 +1,7 @@
-const scores = {};
+interface Scores {
+  [key: string]: number;
+}
+const scores: Scores = {};
 
 scores.math = 95;
 scores.english = 90;

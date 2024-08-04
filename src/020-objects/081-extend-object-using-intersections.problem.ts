@@ -13,6 +13,7 @@ type Product = {
   name: string;
   price: number;
 };
+type A = User & Product;
 
 type tests = [
   Expect<
@@ -36,5 +37,5 @@ type tests = [
       },
       Product
     >
-  >,
+  >
 ];
