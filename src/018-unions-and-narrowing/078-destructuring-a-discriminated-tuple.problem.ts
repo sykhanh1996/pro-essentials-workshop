@@ -3,8 +3,10 @@ import { Equal, Expect } from "@total-typescript/helpers";
 type User = {
   id: string;
 };
+type Success = ["success", User[]];
+type Error = ["error", string];
 
-type ApiResponse = [string, User[] | string];
+type ApiResponse = Success | Error;
 
 async function fetchData(): Promise<ApiResponse> {
   try {
