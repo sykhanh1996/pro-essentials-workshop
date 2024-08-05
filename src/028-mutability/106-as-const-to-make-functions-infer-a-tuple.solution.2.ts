@@ -17,6 +17,6 @@ const example = async () => {
 
   type Tests = [
     Expect<Equal<typeof error, Error | undefined>>,
-    Expect<Equal<typeof data, any>>,
+    Expect<Equal<typeof data, unknown>>,
   ];
 };
