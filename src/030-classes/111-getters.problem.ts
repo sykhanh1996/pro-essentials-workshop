@@ -4,6 +4,10 @@ class CanvasNode {
   x: number;
   y: number;
 
+  get position() {
+    return { x: this.x, y: this.y };
+  }
+
   constructor(position?: { x: number; y: number }) {
     this.x = position?.x ?? 0;
     this.y = position?.y ?? 0;
@@ -21,7 +25,7 @@ it("Should be able to move", () => {
   expect(canvasNode.position).toEqual({ x: 0, y: 0 });
 
   canvasNode.move(10, 20);
-
+  
   expect(canvasNode.position).toEqual({ x: 10, y: 20 });
 });
 
