@@ -1,5 +1,7 @@
 import { Equal, Expect } from "@total-typescript/helpers";
 
+
+
 const configurations = {
   development: {
     apiBaseUrl: "http://localhost:8080",
@@ -15,7 +17,10 @@ const configurations = {
   },
 };
 
-type Environment = "development" | "production" | "staging";
+
+type Configurations = typeof configurations;
+
+type Environment = keyof Configurations;
 
 type test = Expect<
   Equal<Environment, "development" | "production" | "staging">
