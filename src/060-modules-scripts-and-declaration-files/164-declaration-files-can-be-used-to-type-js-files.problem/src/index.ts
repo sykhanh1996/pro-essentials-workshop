@@ -1,3 +1,3 @@
-import { myFunc } from "./example";
+import { myFunc } from "./global";
 
 myFunc();
