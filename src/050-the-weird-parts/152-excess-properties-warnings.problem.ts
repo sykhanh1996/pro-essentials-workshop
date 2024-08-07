@@ -11,7 +11,6 @@ const options = {
   headers: {
     "Content-Type": "application/json",
   },
-  // @ts-expect-error
   search: new URLSearchParams({
     limit: "10",
   }),
