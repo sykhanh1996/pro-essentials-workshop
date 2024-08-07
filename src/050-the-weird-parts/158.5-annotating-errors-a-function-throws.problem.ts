@@ -2,15 +2,21 @@
  * How do we annotate the errors this function throws?
  */
 
+import { P } from "vitest/dist/reporters-BU_vXAUX.js";
+
 type PossibleErrors = SyntaxError | DOMException;
 
 const getUserFromLocalStorage = (id: string) => {
   const user = localStorage.getItem(id);
   if (!user) {
-    return undefined;
+    throw new SyntaxError("User not found");
   }
 
-  return JSON.parse(user);
+  try {
+    return JSON.parse(user);
+  } catch (error) {
+    throw new DOMException("Error parsing user");
+  }
 };
 
 try {

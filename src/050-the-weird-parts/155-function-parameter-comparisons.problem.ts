@@ -2,7 +2,7 @@ import { Equal, Expect } from "@total-typescript/helpers";
 
 type Event = "click" | "hover" | "scroll";
 
-type CallbackType = unknown;
+type CallbackType = (event: Event, x: number, y: number, screenID: number) => void;
 
 const listenToEvent = (callback: CallbackType) => {};
 

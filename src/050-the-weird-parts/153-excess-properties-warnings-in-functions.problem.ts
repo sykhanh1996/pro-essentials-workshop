@@ -12,7 +12,7 @@ const users = [
   },
 ];
 
-const usersWithIds: User[] = users.map((user, index) => ({
+const usersWithIds: User[] = users.map((user, index): User => ({
   ...user,
   id: index,
   // @ts-expect-error
