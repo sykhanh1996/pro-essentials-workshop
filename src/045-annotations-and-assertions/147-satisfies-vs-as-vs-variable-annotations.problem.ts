@@ -2,7 +2,7 @@ import { Equal, Expect } from "@total-typescript/helpers";
 
 // 1
 
-const obj = {} as Record<string, number>;
+const obj: Record<string, number> = {};
 
 obj.a = 1;
 
@@ -11,8 +11,7 @@ obj.b = 2;
 type test = Expect<Equal<typeof obj.a, number>>;
 
 // 2
-
-const menuConfig: Record<
+type MenuConfig = Record<
   string,
   | {
       label: string;
@@ -25,7 +24,9 @@ const menuConfig: Record<
         link: string;
       }[];
     }
-> = {
+>;
+
+const menuConfig = {
   home: {
     label: "Home",
     link: "/home",
@@ -43,7 +44,7 @@ const menuConfig: Record<
       },
     ],
   },
-};
+} satisfies MenuConfig;
 
 type tests = [
   Expect<Equal<typeof menuConfig.home.label, string>>,
@@ -55,11 +56,11 @@ type tests = [
         link: string;
       }[]
     >
-  >,
+  >
 ];
 
 // 3
 
-const element = document.getElementById("app") satisfies HTMLElement;
+const element = document.getElementById("app") as HTMLElement;
 
 type test3 = Expect<Equal<typeof element, HTMLElement>>;
