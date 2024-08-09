@@ -3,4 +3,6 @@
 
 export const myFunc = () => {
   console.log("Hello!");
+  const test = '1'
+  console.log(test);
 };
