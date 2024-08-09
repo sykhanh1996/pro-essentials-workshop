@@ -5,7 +5,7 @@
     "moduleResolution": "Bundler",
     "esModuleInterop": true,
     "declaration": true,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "noEmit": true,
     "strict": true,
     "moduleDetection": "force"
